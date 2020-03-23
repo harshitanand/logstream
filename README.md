@@ -2,6 +2,8 @@
 
 `logstream` is a Node.js streaming cli web app demon used to stream logs to the browser. It uses nodejs event model extensively to watch for file changes & then streaming logs to client app via websockets.
 
+![Home](screens/screen1.png?raw=true)
+
 ## Aproaches
 
 ### Using fs.watchfile (Not Recommended)
@@ -21,6 +23,9 @@
 - A delay of 100 milliseconds appears to work well to emit only one file change event for a given file change while allowing time for multiple file change events to be captured if a file is saved on a fairly frequent basis.
 - We can listen for file changes in Node.js and run code in response to those file changes!
 
+![Code1](screens/code1.png?raw=true)
+![Code2](screens/code2.png?raw=true)
+
 ## User Stories Covered
 
 - A web page or CLI client which will be used by the user on their machine to display the logs remotely
@@ -31,9 +36,10 @@
 **Additional**
 
 - Dockerfile configuration to deploy/run any code
+- Auth Protected web app
+- https supported for web app
 - Logs searching
-- auto-scrolling
-- pausing logs
+- resume/pausing logs
 
 ## Installation options
 

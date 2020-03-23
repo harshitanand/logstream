@@ -32,7 +32,7 @@ const filesNamespace = crypto
 const appBuilder = connect(urlPath);
 if (isAuthorized) {
   appBuilder.session(sessionSecret);
-  appBuilder.authorize(cmd.user, cmd.password);
+  appBuilder.auth(cmd.user, cmd.password);
 }
 appBuilder
   .static(path.join(__dirname, 'client', 'assets'))

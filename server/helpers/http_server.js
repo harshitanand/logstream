@@ -7,7 +7,7 @@ const https = require('https');
 class Server {
   constructor() {
     this._host = null;
-    this._port = 9001;
+    this._port = 50051;
   }
 
   build() {
