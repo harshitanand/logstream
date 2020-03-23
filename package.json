@@ -1,0 +1,59 @@
+{
+  "name": "taillogstream",
+  "version": "1.0.0",
+  "description": "Log streaming cli app demon",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node index.js",
+    "posttest": "npm run lint && nsp check",
+    "prettier": "prettier --single-quote --trailing-comma es5 --print-width 120 --write",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run prettier",
+      "git add"
+    ],
+    ".eslintrc": [
+      "npm run prettier -- --parser json",
+      "git add"
+    ],
+    "*.json": [
+      "npm run prettier",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshitanand/taillogstream.git"
+  },
+  "keywords": [
+    "NodeJs",
+    "Javascript"
+  ],
+  "author": "Harshit Anand <harshitanand94@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harshitanand/taillogstream/issues"
+  },
+  "homepage": "https://github.com/harshitanand/taillogstream#readme",
+  "dependencies": {
+    "basic-auth-connect": "^1.0.0",
+    "commander": "^5.0.0",
+    "connect": "^3.7.0",
+    "cookie": "^0.4.0",
+    "cookie-parser": "^1.4.5",
+    "express-session": "^1.17.0",
+    "md5": "^2.2.1",
+    "serve-static": "^1.14.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-config-prettier": "2.4.0",
+    "eslint-plugin-import": "2.2.0",
+    "lint-staged": "^7.2.2"
+  }
+}
