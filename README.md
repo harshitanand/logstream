@@ -44,7 +44,7 @@
 ## Installation options
 
 - download a codebase from [Git](https://github.com/harshitanand/logstream.git)
-- using [Docker image](https://cloud.docker.com/repository/docker/whipharsh/taillogstream): `docker run -d -P -v $DIR/log:/appLog whipharsh/taillogstream:stage /appLog/<file>`
+- using [Docker image](https://cloud.docker.com/repository/docker/whipharsh/taillogstream): `docker run -d -P -p 50051:50051 -v $DIR/log:/appLog whipharsh/taillogstream:stage /appLog/<file>`
 
 ## Dependency Resolution, test & Running
 
