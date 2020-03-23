@@ -1,5 +1,5 @@
 {
-  "name": "taillogstream",
+  "name": "logstream",
   "version": "1.0.0",
   "description": "Log streaming cli app demon",
   "main": "index.js",
